@@ -1,0 +1,21 @@
+{
+    "main": {
+        "title": "baslik"
+    },
+
+    "nav" : {
+        "home" : "Ana Sayfa",
+        "about-us" : "Hakkımızda",
+        "contact-us" : "Ilitişim",
+        "log-in" : "Oturum aç",
+        "log-out" : "Çıkış yap",
+        "register" : "Kayıt ol",
+        "language" : "Dil",
+        "donations" : "Bağış"
+    },
+
+    "language": {
+        "text" : "Tercih ettiğiniz dili seçin.",
+        "language-setting" : "Dil ayarı"
+    }
+}

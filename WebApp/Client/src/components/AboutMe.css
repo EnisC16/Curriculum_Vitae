@@ -1,0 +1,61 @@
+.aboutMe {
+    display: flex;
+    width: 100%;
+    background-color: #F5F7FA;
+}
+
+.aboutMe__con1 {
+    width: 50%;
+    color: rgb(25, 29, 38);
+    padding: 150px;
+}
+
+.aboutMe__con2 {
+    width: 50%;
+}
+
+.Enis {
+    width: 100%;
+    padding: 15px ;
+}
+
+.aboutMe__emailBtn {
+    width: 125px;
+}
+
+.aboutMe__btnContainer {
+    margin-top: 40px;
+}
+
+.aboutMe__background {
+    display: flex;
+    width: 100%;
+}
+
+.aboutMe__backgroundCon1, .aboutMe__backgroundCon2 {
+    width: 50%;
+    padding: 45px;
+}
+
+.aboutMe__background > h3 {
+    font-family: sans-serif;
+    color: #583bb6;
+}
+
+@media(max-width: 768px){
+    .aboutMe, .aboutMe__background {
+        flex-direction: column;
+    }
+
+    .aboutMe__con1 {
+        padding: 15px 15px 15px 30px;
+    }
+
+    .aboutMe__con2 {
+        width: 100%;
+    }
+
+    .aboutMe__backgroundCon1, .aboutMe__backgroundCon2 {
+        width: 100%;
+    }
+}

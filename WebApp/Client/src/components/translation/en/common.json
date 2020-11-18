@@ -1,0 +1,23 @@
+{
+    "main": {
+        "title": "title"
+    },
+
+    "nav" : {
+        "home" : "Home",
+        "experiences" : "Experiences",
+        "about-me" : "About Me",
+        "contact-me" : "Contact me",
+        "language" : "Language"
+    },
+
+    "aboutme" : {
+        "header" : "Hi, I am Enis, a Software Developer",
+        "email-me" : "Email me"
+    },
+
+    "language": {
+        "text" : "Choose your preferred language.",
+        "language-setting" : "Language Setting"
+    }
+}
