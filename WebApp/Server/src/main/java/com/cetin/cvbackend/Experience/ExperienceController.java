@@ -1,6 +1,6 @@
-package com.cetin.cvbackend.Profile;
+package com.cetin.cvbackend.Experience;
 
-import com.cetin.cvbackend.profile.UserProfile;
+import com.cetin.cvbackend.Experience.ExperienceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,19 +9,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/user-profile")
+@RequestMapping("api/v1/experiences")
 @CrossOrigin("*")
-public class UserProfileController {
+public class ExperienceController {
 
-    private final UserProfileService userProfileService;
+    private final ExperienceService experienceService;
 
     @Autowired
-    public UserProfileController(UserProfileService userProfileService) {
-        this.userProfileService = userProfileService;
+    public ExperienceController(ExperienceService experienceService) {
+        this.experienceService = experienceService;
     }
 
 
     @GetMapping
-    public List<UserProfile> getUserProfile() {        return userProfileService.getUserProfiles();
+    public List<Experience> getExperiences() {
+        return experienceService.getExperiences();
     }
 }

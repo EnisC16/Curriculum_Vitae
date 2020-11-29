@@ -10,6 +10,7 @@ import Language from '../Language';
 import { useTranslation } from 'react-i18next';
 import AboutMe from '../AboutMe';
 import './NavTabs.css';
+import Experiences from '../Experiences';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -90,7 +91,7 @@ export default function NavTabs() {
         <AboutMe />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Page Two
+        <Experiences />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Language />

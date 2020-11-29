@@ -1,23 +1,23 @@
-package com.cetin.cvbackend.Profile;
+package com.cetin.cvbackend.Experience;
 
-import com.cetin.cvbackend.datastore.FakeUserProfileDataStore;
+import com.cetin.cvbackend.datastore.FakeExperienceDataStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import com.cetin.cvbackend.profile.UserProfile;
+import com.cetin.cvbackend.Experience.Experience;
 
 import java.util.List;
 
 @Repository
-public class UserProfileDataAccessService {
+public class ExperienceDataAccessService {
 
-    private final FakeUserProfileDataStore fakeUserProfileDataStore;
+    private final FakeExperienceDataStore fakeExperienceDataStore;
 
     @Autowired
-    public UserProfileDataAccessService(FakeUserProfileDataStore fakeUserProfileDataStore) {
-        this.fakeUserProfileDataStore = fakeUserProfileDataStore;
+    public ExperienceDataAccessService(FakeExperienceDataStore fakeExperienceDataStore) {
+        this.fakeExperienceDataStore = fakeExperienceDataStore;
     }
 
-    List<UserProfile> getUserProfiles(){
-        return fakeUserProfileDataStore.getUserProfiles();
+    List<Experience> getExperiences(){
+        return fakeExperienceDataStore.getExperiences();
     }
 }

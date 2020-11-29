@@ -1,23 +1,24 @@
-package com.cetin.cvbackend.Profile;
+package com.cetin.cvbackend.Experience;
 
+import com.cetin.cvbackend.Experience.ExperienceDataAccessService;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.cetin.cvbackend.profile.UserProfile;
+import com.cetin.cvbackend.Experience.Experience;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public class UserProfileService {
+public class ExperienceService {
 
-    private final UserProfileDataAccessService userProfileDataAccessService;
+    private final ExperienceDataAccessService experienceDataAccessService;
 
     @Autowired
-    public UserProfileService(UserProfileDataAccessService userProfileDataAccessService) {
-        this.userProfileDataAccessService = userProfileDataAccessService;
+    public ExperienceService(ExperienceDataAccessService experienceDataAccessService) {
+        this.experienceDataAccessService = experienceDataAccessService;
     }
 
-    List<UserProfile> getUserProfiles(){
-        return userProfileDataAccessService.getUserProfiles();
+    List<Experience> getExperiences(){
+        return experienceDataAccessService.getExperiences();
     }
 
 }

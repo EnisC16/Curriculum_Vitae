@@ -1,63 +1,59 @@
-package com.cetin.cvbackend.profile;
+package com.cetin.cvbackend.Experience;
 
 import java.util.Objects;
-import java.util.Optional;
 import java.util.UUID;
 
-public class UserProfile {
-    private UUID userProfileId;
-    private String username;
-    private String userProfileImageLink; // S3 key
+public class Experience {
+    private UUID experienceId;
+    private String customerName;
+    private String description;
 
 
-    public UserProfile(UUID userProfileId,
-                        String username,
-                        String userProfileImageLink)
+    public Experience(UUID experienceId,
+                        String customerName,
+                        String description)
     {
-        this.userProfileId = userProfileId;
-        this.username = username;
-        this.userProfileImageLink = userProfileImageLink;
+        this.experienceId = experienceId;
+        this.customerName = customerName;
+        this.description = description;
     }
 
-    public String getUsername() {
-        return username;
+    public UUID getExperienceId() {
+        return experienceId;
     }
 
-    public Optional<String> getUserProfileImageLink() {
-        return Optional.ofNullable(userProfileImageLink);
+    public void setExperienceId(UUID experienceId) {
+        this.experienceId = experienceId;
     }
 
-    public UUID getUserProfileId() {
-        return userProfileId;
+    public String getCustomerName() {
+        return customerName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
-    public void setUserProfileImageLink(String userProfileImageLink) {
-        this.userProfileImageLink = userProfileImageLink;
+    public String getDescription() {
+        return description;
     }
 
-    public void setUserProfileId(UUID userProfileId) {
-        this.userProfileId = userProfileId;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (o == this) return true;
-        if (!(o instanceof UserProfile))  return false;
-
-        UserProfile userProfile = (UserProfile) o;
-        return Objects.equals(userProfileId, userProfile.userProfileId) &&
-                Objects.equals(username, userProfile.username) &&
-                Objects.equals(userProfileImageLink, userProfile.userProfileImageLink);
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Experience that = (Experience) o;
+        return Objects.equals(experienceId, that.experienceId) &&
+                Objects.equals(customerName, that.customerName) &&
+                Objects.equals(description, that.description);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userProfileId, username, userProfileImageLink);
+        return Objects.hash(experienceId, customerName, description);
     }
-
-
 }
