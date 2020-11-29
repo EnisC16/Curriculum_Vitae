@@ -1,5 +1,7 @@
 package com.cetin.cvbackend.profile;
 
+import java.util.Objects;
+import java.util.Optional;
 import java.util.UUID;
 
 public class UserProfile {
@@ -21,11 +23,11 @@ public class UserProfile {
         return username;
     }
 
-    public String getUserProfileImageLink() {
-        return userProfileImageLink;
+    public Optional<String> getUserProfileImageLink() {
+        return Optional.ofNullable(userProfileImageLink);
     }
 
-    public String getUserProfileId() {
+    public UUID getUserProfileId() {
         return userProfileId;
     }
 
@@ -47,8 +49,8 @@ public class UserProfile {
         if (!(o instanceof UserProfile))  return false;
 
         UserProfile userProfile = (UserProfile) o;
-        return Objects.equals(userProfileId, userProfile.userProfileId) && 
-                Objects.equals(username, userProfile.username) && 
+        return Objects.equals(userProfileId, userProfile.userProfileId) &&
+                Objects.equals(username, userProfile.username) &&
                 Objects.equals(userProfileImageLink, userProfile.userProfileImageLink);
     }
 
