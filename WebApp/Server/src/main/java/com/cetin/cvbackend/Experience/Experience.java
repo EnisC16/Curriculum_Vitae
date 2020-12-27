@@ -1,28 +1,36 @@
 package com.cetin.cvbackend.Experience;
 
+import org.bson.types.ObjectId;
 import java.util.Objects;
-import java.util.UUID;
+//import java.util.UUID;
+
 
 public class Experience {
-    private UUID experienceId;
+    private ObjectId experienceId;
     private String customerName;
     private String description;
+    private String note;
+    private Double duration; //in months
 
 
-    public Experience(UUID experienceId,
+    public Experience(ObjectId experienceId,
                         String customerName,
-                        String description)
+                        String description,
+                        String note,
+                        Double duration)
     {
         this.experienceId = experienceId;
         this.customerName = customerName;
         this.description = description;
+        this.note = note;
+        this.duration = duration;
     }
 
-    public UUID getExperienceId() {
+    public ObjectId getExperienceId() {
         return experienceId;
     }
 
-    public void setExperienceId(UUID experienceId) {
+    public void setExperienceId(ObjectId experienceId) {
         this.experienceId = experienceId;
     }
 
@@ -42,6 +50,14 @@ public class Experience {
         this.description = description;
     }
 
+    public Double getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Double duration) {
+        this.duration = duration;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -54,6 +70,6 @@ public class Experience {
 
     @Override
     public int hashCode() {
-        return Objects.hash(experienceId, customerName, description);
+        return Objects.hash(experienceId, customerName, description, note, duration);
     }
 }

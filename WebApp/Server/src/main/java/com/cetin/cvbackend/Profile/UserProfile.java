@@ -1,4 +1,4 @@
-package com.cetin.cvbackend.profile;
+package com.cetin.cvbackend.Profile;
 
 import java.util.Objects;
 import java.util.Optional;

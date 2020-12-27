@@ -1,7 +1,7 @@
 package com.cetin.cvbackend.Profile;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import com.cetin.cvbackend.profile.UserProfile;
+import com.cetin.cvbackend.Profile.UserProfile;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

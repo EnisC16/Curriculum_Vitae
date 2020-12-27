@@ -1,5 +1,5 @@
 package com.cetin.cvbackend.datastore;
-import com.cetin.cvbackend.profile.UserProfile;
+import com.cetin.cvbackend.Profile.UserProfile;
 import org.springframework.stereotype.Repository;
 
 

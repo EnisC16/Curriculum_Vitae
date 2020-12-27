@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { useTranslation } from 'react-i18next';
 import axios from "axios"
+import './Experiences.css';
 
 const MyExpereiences = () => {
     const [experiences, setExperiences] = useState([]);
@@ -18,9 +19,9 @@ const MyExpereiences = () => {
 
     return experiences.map((experience, index) => {
         return (
-            <div>
-                <h1>{experience.customerName}</h1>
-                {experience.description.split('\n').map((desc,i) => {return <p>{desc}</p>})}
+            <div className="experience__exp_div">
+                <h4>{experience.customerName}</h4>
+                {experience.description.split('<br/>').map((desc,i) => {return <p>{desc}</p>})}
             </div>
         )
     })

@@ -1,6 +1,6 @@
 package com.cetin.cvbackend.Profile;
 
-import com.cetin.cvbackend.profile.UserProfile;
+import com.cetin.cvbackend.Profile.UserProfile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;

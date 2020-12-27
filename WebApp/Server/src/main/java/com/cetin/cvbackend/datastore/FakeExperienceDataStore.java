@@ -11,11 +11,12 @@ public class FakeExperienceDataStore {
     private static final List<Experience> EXPERIENCES = new ArrayList<>();
 
     static {
-        EXPERIENCES.add(new Experience(UUID.randomUUID(), "Unternehmen1", "Created Trigger \n created Interfaces"));
-        EXPERIENCES.add(new Experience(UUID.randomUUID(), "Unternehmen2", "Created more Trigger <br/> created more Interfaces"));
+        //EXPERIENCES.add(new Experience(UUID.randomUUID(), "Unternehmen1", "Created Trigger \n created Interfaces"));
+        //EXPERIENCES.add(new Experience(UUID.randomUUID(), "Unternehmen2", "Created more Trigger <br/> created more Interfaces"));
     }
 
     public List<Experience> getExperiences() {
-        return EXPERIENCES;
+        return MongoDBConnection.getExerciseTable();
+        //return EXPERIENCES;
     }
 }

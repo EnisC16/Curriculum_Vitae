@@ -1,0 +1,31 @@
+.experience__exp_div {
+    margin-bottom: 3em;
+    background: #fff;
+    border: 3px solid #edf1f3;
+    border-radius: 6px;
+    display: block;
+    font-size: 1em;
+    line-height: 1.66;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.experience__exp_div > h4{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+
+@media(max-width: 768px){
+    .experience__exp_div {
+        margin-top: 100px;
+        padding: 16px;
+        font-size: 1em;
+        line-height: 1.66;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+
+} 
