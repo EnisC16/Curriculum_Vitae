@@ -29,7 +29,7 @@ const MyExpereiences = () => {
 
 function Experiences() {
     return (
-        <div>
+        <div className="experience___wrapper">
             <MyExpereiences />
         </div>
     )
