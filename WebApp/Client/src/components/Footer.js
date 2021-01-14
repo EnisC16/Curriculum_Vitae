@@ -1,17 +1,8 @@
 import React from 'react'
 import './Footer.css'
-import SocialMediaIcons from 'react-social-media-icons';
+import { SocialIcon } from 'react-social-icons';
 
 function Footer() {
-    const socialMediaIcons = [
-        {
-          url: 'https://github.com/EnisC16',
-          className: 'fa-github-square',
-        }
-      ];
-      
-      
-
     return (
         <footer className="footer__main">
 
@@ -22,13 +13,9 @@ function Footer() {
             </div>
 
             <div className="footer__links">
-                <h3>Contact Me</h3><br/>
-                <a href="https://github.com/EnisC16">GitHub</a>
-                <SocialMediaIcons
-                    icons={socialMediaIcons}
-                    iconSize={'1.3em'}
-                    iconColor={'#495056'}
-                />
+                <h3>Social Media</h3><br/>
+                <SocialIcon url="https://github.com/EnisC16" />&nbsp;&nbsp;&nbsp;
+                <SocialIcon url="https://www.linkedin.com/in/enis-c-962854162/" />
             </div>
             
         </footer>

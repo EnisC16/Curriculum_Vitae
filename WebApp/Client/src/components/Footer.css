@@ -26,5 +26,11 @@
 @media(max-width: 768px){
     .footer__main {
         width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .footer__links {
+        margin-top: 50px;
     }
 }

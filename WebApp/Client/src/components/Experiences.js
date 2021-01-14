@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import { useTranslation } from 'react-i18next';
 import Ratings from 'react-ratings-declarative';
 import axios from "axios"
 import './Experiences.css';
-import Footer from './Footer';
 
 const MyExpereiences = () => {
     const [experiences, setExperiences] = useState([]);
