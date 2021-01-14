@@ -13,7 +13,9 @@
 
     "aboutme" : {
         "header" : "Hi, I am Enis, a Software Developer",
-        "email-me" : "Email me"
+        "email-me" : "Email me",
+        "my-background-txt": "I am a full-stack web developer.",
+        "my-background-txt2": "My main areas of expertise include Javascript, React.js, Node.js, HTML, CSS, Java and Salesforce Ligtning since 2015."
     },
 
     "language": {

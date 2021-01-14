@@ -10,6 +10,7 @@ public class Experience {
     private String customerName;
     private String description;
     private String note;
+    private String title;
     private Double duration; //in months
 
 
@@ -17,12 +18,14 @@ public class Experience {
                         String customerName,
                         String description,
                         String note,
+                        String title,
                         Double duration)
     {
         this.experienceId = experienceId;
         this.customerName = customerName;
         this.description = description;
         this.note = note;
+        this.title = title;
         this.duration = duration;
     }
 
@@ -32,6 +35,14 @@ public class Experience {
 
     public void setExperienceId(ObjectId experienceId) {
         this.experienceId = experienceId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getCustomerName() {

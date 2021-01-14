@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { useTranslation } from 'react-i18next';
+import Ratings from 'react-ratings-declarative';
 import axios from "axios"
 import './Experiences.css';
+import Footer from './Footer';
 
 const MyExpereiences = () => {
     const [experiences, setExperiences] = useState([]);
@@ -21,7 +23,45 @@ const MyExpereiences = () => {
         return (
             <div className="experience__exp_div">
                 <h4>{experience.customerName}</h4>
+                <p className="experience__title">( as {experience.title})</p>
                 {experience.description.split('<br/>').map((desc,i) => {return <p>{desc}</p>})}
+            </div>
+        )
+    })
+}
+
+const MySkills = () => {
+    const [skills, setSkills] = useState([]);
+
+    const fetchSkills = () => {
+        axios.get("http://localhost:8080/api/v1/skills").then(res => {
+            console.log(res);
+            setSkills(res.data);
+        });
+    }
+
+    useEffect(() => {
+        fetchSkills();
+    }, []);
+
+    return skills.map((skill, index) => {
+        return (
+            <div className="skill__skill_div">
+                <p>{skill.name}</p>
+                <div className="skill__star_div">
+                    <Ratings
+                        rating={skill.rating}
+                        widgetDimensions="13px"
+                        widgetSpacings="15px"
+                    >
+                        <Ratings.Widget widgetRatedColor="rgb(0, 136, 145)"/>
+                        <Ratings.Widget widgetRatedColor="rgb(0, 136, 145)"/>
+                        <Ratings.Widget widgetRatedColor="rgb(0, 136, 145)"/>
+                        <Ratings.Widget widgetRatedColor="rgb(0, 136, 145)"/>
+                        <Ratings.Widget widgetRatedColor="rgb(0, 136, 145)"/>
+                    </Ratings>
+                </div>
+                
             </div>
         )
     })
@@ -29,8 +69,23 @@ const MyExpereiences = () => {
 
 function Experiences() {
     return (
+        <div className="wrappper">
+        <div className="exp_skill_wrapper">
+            <div className="skill___header">
+                <h4><span> Skills </span></h4>
+            </div>
+            <div className="skill___wrapper">
+                <MySkills />
+            </div>
+            
+        </div>
+        <br/><br/><br/>
+        <div className="skill___header">
+            <h4><span> Experiences </span></h4>
+        </div>
         <div className="experience___wrapper">
-            <MyExpereiences />
+                <MyExpereiences />
+            </div>
         </div>
     )
 }

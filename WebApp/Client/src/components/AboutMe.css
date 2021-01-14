@@ -2,6 +2,7 @@
     display: flex;
     width: 100%;
     background-color: #F5F7FA;
+    padding-top: 50px;
 }
 
 .aboutMe__con1 {
@@ -29,18 +30,40 @@
 
 .aboutMe__background {
     display: flex;
-    width: 100%;
+    width: 80%;
+    margin: auto;
 }
 
-.aboutMe__backgroundCon1, .aboutMe__backgroundCon2 {
+.background_txt {
+    margin-top: 20px;
+    width: 70%;
+}
+
+.skill_txt {
+    margin-top: 20px;
+}
+
+.aboutMe__backgroundCon1 {
     width: 50%;
-    padding: 45px;
+}
+
+.aboutMe__backgroundCon2 {
+    width: 35%;
 }
 
 .aboutMe__background > h3 {
     font-family: sans-serif;
     color: #583bb6;
 }
+
+.aboutMe__backgroundCon1, .aboutMe__backgroundCon2 {
+    padding: 45px;
+}
+
+.aboutMe__backgroundCon1 > h3, .aboutMe__backgroundCon2 > h3 {
+    color: #00587a;
+}
+
 
 @media(max-width: 768px){
     .aboutMe, .aboutMe__background {
@@ -56,6 +79,11 @@
     }
 
     .aboutMe__backgroundCon1, .aboutMe__backgroundCon2 {
+        width: 100%;
+        padding: 10px 10px 30px 10px;
+    }
+
+    .background_txt {
         width: 100%;
     }
 }

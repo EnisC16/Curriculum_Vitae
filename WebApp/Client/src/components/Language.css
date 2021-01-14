@@ -1,14 +1,17 @@
 .language {
     display: flex;
     background-color: white;
-    height: 100vh;
+    height: 70vh;
     flex-direction: column;
     align-items: center;
-    margin-top: 150px;
 }
 
 .language__container {
-    width: 325px;
+    padding-top: 200px;
+}
+
+.language__container > div{
+    width: 625px;
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -17,9 +20,13 @@
     align-items: center;
 }
 
-.language__container > h1 {
-    font-weight: 500;
+.language__container > div > h1 {
+    font-weight: 700;
     margin-bottom: 20px;
+}
+
+.language__container > div > p {
+    margin-bottom: 10px;
 }
 
 .language__container > p {
@@ -40,4 +47,11 @@
     border-color: #f1f1e8;
     background: #3e978b;
     color: white;
+}
+
+@media(max-width: 768px){
+    .language__container > div{
+        width: 325px;
+        text-align: center;
+    }
 }

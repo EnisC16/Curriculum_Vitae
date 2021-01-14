@@ -6,7 +6,10 @@ import NavTabs from './Nav/NavTabs';
 class App extends React.Component {
     render(){
         return (
-            <NavTabs />
+            <div className="app__wrapper">
+                <NavTabs />
+            </div>
+            
         );
     }
 }

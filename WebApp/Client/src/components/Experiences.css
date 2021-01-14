@@ -1,44 +1,137 @@
+.wrapper {
+    width: 100%;
+}
+
+.exp_skill_wrapper {
+    padding-top: 50px;
+}
+
 .experience__exp_div {
-    margin-top: 5em;
+    margin-top: 2em;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 16px;
     background: #fff;
     border: 3px solid #edf1f3;
     border-radius: 6px;
     display: block;
     font-size: 1em;
     line-height: 1.66;
-    margin-left: 15px;
-    margin-right: 15px;
-    padding: 16px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.skill__skill_div {
+    background: #fff;
+    display: block;
+    padding: 5px;
+}
+
+.exp_inner_container {
+    padding: 20px;
+}
+
+.exp___header {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 12px;
+    font-family: "brandon grotesque", helvetica, sans-serif;
+}
+
+.skill___header {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 36px;
+    font-family: "brandon grotesque", helvetica, sans-serif;
+}
+
+.skill___header > h4{
+    width: 45%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 20px auto;
+}
+
+.skill___header > h4 span{
+    background:#fff; 
+    padding:0 10px; 
 }
 
 .experience__exp_div > h4{
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     font-size: 1.2em;
 }
 
+.experience__title{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.0em;
+    color: #787878;
+}
+
 .experience___wrapper {
-    width: 50%;
-    float: left;
-    margin-bottom: 5em;
-    padding: 0 15px 0 30px;
+    margin: 5em auto;
+    padding: 0 30px 0 30px;
+    display: block;
+    width: 90%;
+}
+
+.skill___wrapper {
+    margin: 50px 45px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 6px;
+    border: 3px solid #edf1f3;
+}
+
+.wrappper {
+    width: 65%;
+    margin: auto;
 }
 
 
 @media(max-width: 768px){
     .experience__exp_div {
-        margin-top: 100px;
+        margin-top: 30px;
         padding: 16px;
         font-size: 1em;
         line-height: 1.66;
         margin-left: 15px;
         margin-right: 15px;
+        word-wrap: break-word;
+    }
+
+    .wrappper {
+        width: 100%;
+        margin: auto;
     }
 
     .experience___wrapper {
         width: 100%;
         float: none;
+        margin-top: 0;
+    }
+
+    .skill__skill_div {
+        padding: 10px;
+        font-size: 1em;
+        word-wrap: break-word;
+    }
+
+    .skill___wrapper {
+        width: 95%;
+        float: none;
+        margin: 10px;
+        padding: 10px 15px;
+        grid-template-columns: auto;
+    }
+
+    .skill___header > h4{
+        width: 65%;
     }
 
 } 

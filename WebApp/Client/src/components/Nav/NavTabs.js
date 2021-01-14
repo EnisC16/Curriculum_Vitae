@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 import AboutMe from '../AboutMe';
 import './NavTabs.css';
 import Experiences from '../Experiences';
+import Footer from '../Footer';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -75,26 +76,33 @@ export default function NavTabs() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="nav tabs"
-          centered
-        >
-          <LinkTab label={t('nav.about-me')} href="/aboutme" {...a11yProps(0)} />
-          <LinkTab label={t('nav.experiences')} href="/experiences" {...a11yProps(1)} />
-          <LinkTab label={t('nav.language')} href="/language" {...a11yProps(2)} />
-        </Tabs>
-      </AppBar>
+      <div className="nav_bar">
+        <AppBar position="static"  style={{ background: "linear-gradient(to right, #0f3057, #00587a, #008891)" }}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="nav tabs"
+            centered
+          >
+            <LinkTab label={t('nav.about-me')} href="/aboutme" {...a11yProps(0)} />
+            <LinkTab label={t('nav.experiences')} href="/experiences" {...a11yProps(1)} />
+            <LinkTab label={t('nav.language')} href="/language" {...a11yProps(2)} />
+          </Tabs>
+        </AppBar>
+      </div>
+      
+
       <TabPanel value={value} index={0}>
         <AboutMe />
+        <Footer />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Experiences />
+        <Footer />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Language />
+        <Footer />
       </TabPanel>
     </div>
   );
