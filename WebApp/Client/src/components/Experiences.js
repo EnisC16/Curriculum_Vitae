@@ -19,10 +19,10 @@ const MyExpereiences = () => {
 
     return experiences.map((experience, index) => {
         return (
-            <div className="experience__exp_div">
+            <div className="experience__exp_div" key={index}>
                 <h4>{experience.customerName}</h4>
                 <p className="experience__title">( as {experience.title})</p>
-                {experience.description.split('<br/>').map((desc,i) => {return <p>{desc}</p>})}
+                {experience.description.split('<br/>').map((desc,i) => {return <p key={i}>{desc}</p>})}
             </div>
         )
     })
@@ -44,7 +44,7 @@ const MySkills = () => {
 
     return skills.map((skill, index) => {
         return (
-            <div className="skill__skill_div">
+            <div className="skill__skill_div" key={index}>
                 <p>{skill.name}</p>
                 <div className="skill__star_div">
                     <Ratings
