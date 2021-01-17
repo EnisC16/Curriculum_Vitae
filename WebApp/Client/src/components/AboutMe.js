@@ -8,6 +8,7 @@ function AboutMe() {
     const { t, i18n } = useTranslation('common');
 
     const goToForm = () => {
+        console.log('public url: ', process.env.PUBLIC_URL);
         window.scrollTo({ top: 800, behavior: 'smooth' });
     };
 
