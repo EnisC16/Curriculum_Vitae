@@ -5,7 +5,7 @@ import './Form.css';
 
 
 function fetchAPI(map) {
-  return fetch("http://localhost:8080/api/v1/mail?name=" + map.name + "&email=" + map.email + "&message=" + map.message);
+  return fetch("http://18.189.197.103:8080/api/v1/mail?name=" + map.name + "&email=" + map.email + "&message=" + map.message);
 }
 
 
