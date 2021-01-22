@@ -15,7 +15,7 @@
 	<description>spring boot for CV webpage as backend</description>
 
 	<properties>
-		<java.version>15</java.version>
+		<java.version>14</java.version>
 	</properties>
 
 	<dependencies>
@@ -46,7 +46,9 @@
                     <target>14</target>
                 </configuration>
             </plugin>
+
         </plugins>
+		<finalName>cv-backend</finalName>
 	</build>
 
 </project>
