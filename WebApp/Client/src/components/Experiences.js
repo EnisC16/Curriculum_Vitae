@@ -7,7 +7,7 @@ const MyExpereiences = () => {
     const [experiences, setExperiences] = useState([]);
 
     const fetchExperiences = () => {
-        axios.get("http://18.189.197.103:8080/api/v1/experiences").then(res => {
+        axios.get("http://localhost:8080/api/v1/experiences").then(res => {
             console.log(res);
             setExperiences(res.data);
         });
@@ -32,7 +32,7 @@ const MySkills = () => {
     const [skills, setSkills] = useState([]);
 
     const fetchSkills = () => {
-        axios.get("http://18.189.197.103:8080/api/v1/skills").then(res => {
+        axios.get("http://localhost:8080/api/v1/skills").then(res => {
             console.log(res);
             setSkills(res.data);
         });
